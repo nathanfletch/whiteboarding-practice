@@ -1,4 +1,4 @@
-import functionName from './../src/js/logic.js';
+import functionName from '../src/js/functionName.js';
 
 describe('functionName', () => {
 

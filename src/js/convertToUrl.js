@@ -16,12 +16,12 @@
 export default function convertToUrl (str) {
   //recurse
   //return the base case - length is 0 - start at beginning or end? want to start concatting from beginning, so start backwards, return forwards
-  //else convert the char if space
-
+  
   if(str.length === 0) {
     return "";
   }
-
+  
+  //else convert the char if space
   let convertedChar = str[str.length - 1];
 
   if(convertedChar === ' ') {
