@@ -1,20 +1,37 @@
-export default function removeDuplicates (arr) {
-  let noDupesArr = [];
+// export default function removeDuplicates (arr) {
+//   let noDupesArr = [];
 
-  //test if noDupesArr includes el, push it if so
-  for(let i = 0; i < arr.length; i++) {
-    if(!noDupesArr.includes(arr[i])) {
-      noDupesArr.push(arr[i]);
-    }
-  }
+//   //test if noDupesArr includes el, push it if so
+//   for(let i = 0; i < arr.length; i++) {
+//     if(!noDupesArr.includes(arr[i])) {
+//       noDupesArr.push(arr[i]);
+//     }
+//   }
+//   return noDupesArr;
+// }
 
-  return noDupesArr;
-}
 
-// Question #2: Array Deduping
-// Write an algorithm that removes duplicates from an array. Do not use a function like filter() to solve this. Once you have solved the problem, demonstrate how it can be solved with filter(). Solve the problem with and without recursion.
+// export default function removeDuplicates (arr) {
+//   //base: empty arr
 
-// Example
-// Input: [7, 9, "hi", 12, "hi" 7, 53]
+//   if(arr.length === 0) return [];
 
-// Output: [7, 9, "hi", 12, 53]
+//   //build an array up from this empty one - concat or not. 
+
+//   //get array minus the last element
+//   let arrMinusOne = arr.slice(0,arr.length - 1);
+//   let currentElement = arr[arr.length - 1];
+
+//   //test if arrMinusOne includes el, return it if so, else concat current el
+//   if(arrMinusOne.includes(currentElement)) {
+//     return removeDuplicates(arrMinusOne);
+//   } else {
+//     return removeDuplicates(arrMinusOne).concat(currentElement);
+//   }
+//   //concat current element if it is not included.
+//   //if i don't concat it, will the "first part" be connected to the "last part"?
+//   //we don't need to connect a "last part" - we just need to return an array, which we do, whether we concat or not.
+// }
+
+
+
