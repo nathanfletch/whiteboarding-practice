@@ -1,0 +1,49 @@
+//sorts an array, don't use .sort, any kind
+
+array of integers, 
+example input: [9,2,7,7,8,8,8,12]
+[9,2,7,12]
+[2,7,12,9]
+
+[12,9]
+
+
+
+output: [2,7,9,12]
+
+
+function quickSort(arr) { //arr:[12,9]
+//pick a random value from the array
+//everything smaller goes on the left, everything larger goes on the right. 
+//call quicksort again on each side array.
+
+//base case 
+if(arr.length <= 1) return arr;
+
+let pivotIndex = Math.floor[arr.length/2); //1
+let pivotValue = arr[pivotIndex]; //9
+
+//make 3 arrays to hold lesser, equal, or greater values
+let lesserArray = []; 
+let equalArray = [];
+let greaterArray = [];
+
+//iterate through and push each value to the appropriate array
+for(let i = 0; i < arr.length; i++) {
+	if (arr[i] < pivotValue) {	{
+		lesserArray.push(arr[i]); // []
+	} else if (arr[i] > pivotValue) {
+		greaterArray.push(arr[i]); // [12]
+	} else {
+		equalArray.push(arr[i]); // [9]
+	}
+ }
+
+// call quickSort recursively on both sides
+lesserArray = quickSort(lesserArray);
+greaterArray = quickSort(greaterAray);
+
+// return the combined arrays as the result
+return [ ...lesserArray, ...equalArray, ...greaterArray ]; // [9, 12]
+
+}
